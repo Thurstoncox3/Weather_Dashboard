@@ -31,7 +31,7 @@ function currentCondition(city) {
 
         var lat = cityWeatherResponse.coord.lat;
         var lon = cityWeatherResponse.coord.lon;
-        var uviQueryURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+        var uviQueryURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 
         $.ajax({
             url: uviQueryURL,
@@ -66,7 +66,7 @@ function currentCondition(city) {
 }
 
 function futureCondition(lat, lon) {
-    var futureURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=current,minutely,hourly,alerts&appid=${apiKey}`;
+    var futureURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=current,minutely,hourly,alerts&appid=${API_KEY}`;
 
     $.ajax({
         url: futureURL,
@@ -103,8 +103,6 @@ function futureCondition(lat, lon) {
         }
     }); 
 }
-/* <--fix the cards so to show 5day span --> */
-
 
 $("#searchBtn").on("click", function(event) {
     event.preventDefault();

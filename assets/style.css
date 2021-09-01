@@ -28,7 +28,6 @@ li {
 #searchResults {
     height: 100vh;
 }
-/* <--fix the cards so they align correctly */
 #fiveDay .card {
     border: 1px solid white!important;
 }
